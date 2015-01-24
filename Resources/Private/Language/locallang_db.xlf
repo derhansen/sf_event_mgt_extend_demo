@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-01-24T13:18:54Z" product-name="sf_event_mgt_extend_demo">
+		<header/>
+		<body>
+			<trans-unit id="tx_sfeventmgtextenddemo_domain_model_registration">
+				<source>New Registration Fields</source>
+			</trans-unit>
+			<trans-unit id="tx_sfeventmgtextenddemo_domain_model_registration.hotel_room_needed">
+				<source>Hotel Room Needed</source>
+			</trans-unit>
+			<trans-unit id="tx_sfeventmgtextenddemo_domain_model_registration.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_sfeventmgt_domain_model_registration.tx_extbase_type.Tx_SfEventMgtExtendDemo_Registration">
+				<source>Event management - Extend Demo Registration</source>
+			</trans-unit>
+			<trans-unit id="tx_sfeventmgtextenddemo_domain_model_event">
+				<source>New Event Fields</source>
+			</trans-unit>
+			<trans-unit id="tx_sfeventmgtextenddemo_domain_model_event.entrance">
+				<source>Entrance</source>
+			</trans-unit>
+			<trans-unit id="tx_sfeventmgt_domain_model_event.tx_extbase_type.Tx_SfEventMgtExtendDemo_Event">
+				<source>Event management - Extend Demo Event</source>
+			</trans-unit>
+			<trans-unit id="tx_sfeventmgtextenddemo.tx_extbase_type">
+				<source>Record type</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

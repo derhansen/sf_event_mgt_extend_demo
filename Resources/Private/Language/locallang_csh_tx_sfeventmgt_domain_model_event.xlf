@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-01-24T13:18:54Z" product-name="sf_event_mgt_extend_demo">
+		<header/>
+		<body>
+			<trans-unit id="entrance.description">
+				<source>entrance</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

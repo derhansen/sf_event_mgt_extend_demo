@@ -1,0 +1,162 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    495,
+                    56
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": [
+
+                    ]
+                },
+                "name": "Registration",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "\\DERHANSEN\\SfEventMgt\\Domain\\Model\\Registration",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1246921265467"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hotelRoomNeeded",
+                            "propertyType": "Boolean",
+                            "uid": "479884566353"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "fax",
+                            "propertyType": "String",
+                            "uid": "1405509408361"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+
+                    ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    214,
+                    55
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": [
+
+                    ]
+                },
+                "name": "Event",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "\\DERHANSEN\\SfEventMgt\\Domain\\Model\\Event",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1128918981481"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "entrance",
+                            "propertyType": "String",
+                            "uid": "919646419028"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+
+                    ]
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [
+
+        ],
+        "description": "A demo extenstion which shows, how to extend existing tables in sf_event_mgt",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 6.2\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "6.2",
+            "version": ""
+        },
+        "extensionKey": "sf_event_mgt_extend_demo",
+        "name": "Event management - Extend Demo",
+        "originalExtensionKey": "",
+        "persons": [
+            {
+                "company": "Skyfillers GmbH",
+                "email": "derhansen@gmail.com",
+                "name": "Torben Hansen",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+
+        ],
+        "vendorName": "DERHANSEN"
+    },
+    "wires": [
+
+    ],
+    "log": {
+        "last_modified": "2015-01-24 01:18",
+        "extension_builder_version": "6.2.0",
+        "be_user": " (1)"
+    }
+}
