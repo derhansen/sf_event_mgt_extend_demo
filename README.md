@@ -25,8 +25,14 @@ and enter the class of the sf_event_mgt table you want to extend (e.g. \DERHANSE
 ## Important notes
 
 ###Update existing records###
-If your TYPO3 installation does already contain events or registrations, make sure to update existing records
-so the new field "Record type" is set.
+If your TYPO3 installation does already contain events or registrations, make sure to update existing records so the new field "tx_extbase_type" (the so called "Record type") is set in each table that you extend. 
+
+Use a database management tool like phpMyAdmin to adjust the field. The value needed depends on the name of your extension and the extended model. For this demo extension the correct values are:
+
+* For the Events table: "Tx_SfEventMgtExtendDemo_Event" 
+* For the Registrations table: "Tx_SfEventMgtExtendDemo_Registration"
+
+The easiest way to derived the correct value for your table is to create one new record and to look the value up in the "tx_extbase_type" field of this record. Then copy it to all existing records.
 
 ###Extending registration domain model###
 If you extend the registration domain model, make sure to add the following to ext_typoscript_setup.txt
