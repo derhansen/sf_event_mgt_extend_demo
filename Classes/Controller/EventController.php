@@ -5,7 +5,7 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Controller;
  *
  *  Copyright notice
  *
- *  (c) 2015 Torben Hansen <t.hansen@skyfillers.com>
+ *  (c) 2015 Torben Hansen <derhansen@gmail.com>
  *
  *  All rights reserved
  *
