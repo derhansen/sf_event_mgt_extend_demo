@@ -27,5 +27,6 @@ config.tx_extbase{
     }
     objects {
         DERHANSEN\SfEventMgt\Controller\EventController.className = DERHANSEN\SfEventMgtExtendDemo\Controller\EventController
+        DERHANSEN\SfEventMgt\Domain\Model\Event.className = DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event
     }
 }

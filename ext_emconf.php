@@ -5,7 +5,6 @@ $EM_CONF[$_EXTKEY] = array(
 	'category' => 'plugin',
 	'author' => 'Torben Hansen',
 	'author_email' => 'derhansen@gmail.com',
-	'author_company' => 'Skyfillers GmbH',
 	'state' => 'alpha',
 	'internal' => '',
 	'uploadfolder' => '0',
@@ -14,8 +13,8 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '0.1.0',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.2',
-			'sf_event_mgt' => '0.5.0'
+			'typo3' => '6.2.0-7.99.99',
+			'sf_event_mgt' => '0.5.0-0.0.0'
 		),
 		'conflicts' => array(
 		),
