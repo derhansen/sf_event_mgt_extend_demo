@@ -1,12 +1,11 @@
 <?php
 namespace DERHANSEN\SfEventMgtExtendDemo\Domain\Model;
 
-
 /***************************************************************
  *
  *  Copyright notice
  *
- *  (c) 2015 Torben Hansen <derhansen@gmail.com>, Skyfillers GmbH
+ *  (c) 2015-2017 Torben Hansen <derhansen@gmail.com>
  *
  *  All rights reserved
  *
@@ -30,67 +29,71 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Domain\Model;
 /**
  * Registration
  */
-class Registration extends \DERHANSEN\SfEventMgt\Domain\Model\Registration {
+class Registration extends \DERHANSEN\SfEventMgt\Domain\Model\Registration
+{
+    /**
+     * hotelRoomNeeded
+     *
+     * @var boolean
+     */
+    protected $hotelRoomNeeded = false;
 
-	/**
-	 * hotelRoomNeeded
-	 *
-	 * @var boolean
-	 */
-	protected $hotelRoomNeeded = FALSE;
+    /**
+     * fax
+     *
+     * @var string
+     */
+    protected $fax = '';
 
-	/**
-	 * fax
-	 *
-	 * @var string
-	 */
-	protected $fax = '';
+    /**
+     * Returns the hotelRoomNeeded
+     *
+     * @return boolean $hotelRoomNeeded
+     */
+    public function getHotelRoomNeeded()
+    {
+        return $this->hotelRoomNeeded;
+    }
 
-	/**
-	 * Returns the hotelRoomNeeded
-	 *
-	 * @return boolean $hotelRoomNeeded
-	 */
-	public function getHotelRoomNeeded() {
-		return $this->hotelRoomNeeded;
-	}
+    /**
+     * Sets the hotelRoomNeeded
+     *
+     * @param boolean $hotelRoomNeeded
+     * @return void
+     */
+    public function setHotelRoomNeeded($hotelRoomNeeded)
+    {
+        $this->hotelRoomNeeded = $hotelRoomNeeded;
+    }
 
-	/**
-	 * Sets the hotelRoomNeeded
-	 *
-	 * @param boolean $hotelRoomNeeded
-	 * @return void
-	 */
-	public function setHotelRoomNeeded($hotelRoomNeeded) {
-		$this->hotelRoomNeeded = $hotelRoomNeeded;
-	}
+    /**
+     * Returns the boolean state of hotelRoomNeeded
+     *
+     * @return boolean
+     */
+    public function isHotelRoomNeeded()
+    {
+        return $this->hotelRoomNeeded;
+    }
 
-	/**
-	 * Returns the boolean state of hotelRoomNeeded
-	 *
-	 * @return boolean
-	 */
-	public function isHotelRoomNeeded() {
-		return $this->hotelRoomNeeded;
-	}
+    /**
+     * Returns the fax
+     *
+     * @return string $fax
+     */
+    public function getFax()
+    {
+        return $this->fax;
+    }
 
-	/**
-	 * Returns the fax
-	 *
-	 * @return string $fax
-	 */
-	public function getFax() {
-		return $this->fax;
-	}
-
-	/**
-	 * Sets the fax
-	 *
-	 * @param string $fax
-	 * @return void
-	 */
-	public function setFax($fax) {
-		$this->fax = $fax;
-	}
-
+    /**
+     * Sets the fax
+     *
+     * @param string $fax
+     * @return void
+     */
+    public function setFax($fax)
+    {
+        $this->fax = $fax;
+    }
 }

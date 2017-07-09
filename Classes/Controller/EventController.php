@@ -5,7 +5,7 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Controller;
  *
  *  Copyright notice
  *
- *  (c) 2015 Torben Hansen <derhansen@gmail.com>
+ *  (c) 2015-2017 Torben Hansen <derhansen@gmail.com>
  *
  *  All rights reserved
  *
@@ -29,18 +29,20 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Controller;
 /**
  * EventController
  */
-class EventController extends \DERHANSEN\SfEventMgt\Controller\EventController {
-
-	/**
-	 * Saves the registration
-	 *
-	 * @param $registration \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Registration
-	 * @param $event \DERHANSEN\SfEventMgt\Domain\Model\Event
-	 * @validate $registration \DERHANSEN\SfEventMgt\Validation\Validator\RegistrationValidator
-	 * @return void
-	 */
-	public function saveRegistrationAction(\DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Registration $registration, \DERHANSEN\SfEventMgt\Domain\Model\Event $event) {
-		parent::saveRegistrationAction($registration, $event);
-	}
-
+class EventController extends \DERHANSEN\SfEventMgt\Controller\EventController
+{
+    /**
+     * Saves the registration
+     *
+     * @param $registration \DERHANSEN\SfEventMgt\Domain\Model\Registration
+     * @param $event \DERHANSEN\SfEventMgt\Domain\Model\Event
+     * @validate $registration \DERHANSEN\SfEventMgt\Validation\Validator\RegistrationValidator
+     * @return void
+     */
+    public function saveRegistrationAction(
+        \DERHANSEN\SfEventMgt\Domain\Model\Registration $registration,
+        \DERHANSEN\SfEventMgt\Domain\Model\Event $event
+    ) {
+        parent::saveRegistrationAction($registration, $event);
+    }
 }

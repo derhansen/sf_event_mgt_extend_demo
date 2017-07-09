@@ -5,7 +5,7 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Domain\Model;
  *
  *  Copyright notice
  *
- *  (c) 2015 Torben Hansen <derhansen@gmail.com>, Skyfillers GmbH
+ *  (c) 2015-2017 Torben Hansen <derhansen@gmail.com>
  *
  *  All rights reserved
  *
@@ -29,32 +29,33 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Domain\Model;
 /**
  * Event
  */
-class Event extends \DERHANSEN\SfEventMgt\Domain\Model\Event {
+class Event extends \DERHANSEN\SfEventMgt\Domain\Model\Event
+{
+    /**
+     * entrance
+     *
+     * @var string
+     */
+    protected $entrance = '';
 
-	/**
-	 * entrance
-	 *
-	 * @var string
-	 */
-	protected $entrance = '';
+    /**
+     * Returns the entrance
+     *
+     * @return string $entrance
+     */
+    public function getEntrance()
+    {
+        return $this->entrance;
+    }
 
-	/**
-	 * Returns the entrance
-	 *
-	 * @return string $entrance
-	 */
-	public function getEntrance() {
-		return $this->entrance;
-	}
-
-	/**
-	 * Sets the entrance
-	 *
-	 * @param string $entrance
-	 * @return void
-	 */
-	public function setEntrance($entrance) {
-		$this->entrance = $entrance;
-	}
-
+    /**
+     * Sets the entrance
+     *
+     * @param string $entrance
+     * @return void
+     */
+    public function setEntrance($entrance)
+    {
+        $this->entrance = $entrance;
+    }
 }

@@ -1,33 +1,5 @@
 config.tx_extbase{
-    persistence{
-        classes{
-            DERHANSEN\SfEventMgt\Domain\Model\Registration {
-                subclasses {
-                    Tx_SfEventMgtExtendDemo_Registration = DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Registration
-                }
-            }
-            DERHANSEN\SfEventMgt\Domain\Model\Event {
-                subclasses {
-                    Tx_SfEventMgtExtendDemo_Event = DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event
-                }
-            }
-            DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Registration {
-                mapping {
-                    tableName = tx_sfeventmgt_domain_model_registration
-                    recordType = Tx_SfEventMgtExtendDemo_Registration
-                }
-            }
-            DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event {
-                mapping {
-                    tableName = tx_sfeventmgt_domain_model_event
-                    recordType = Tx_SfEventMgtExtendDemo_Event
-                }
-            }
-        }
-    }
     objects {
         DERHANSEN\SfEventMgt\Controller\EventController.className = DERHANSEN\SfEventMgtExtendDemo\Controller\EventController
-        DERHANSEN\SfEventMgt\Domain\Model\Event.className = DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event
-        DERHANSEN\SfEventMgt\Domain\Model\Registration.className = DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Registration
     }
 }

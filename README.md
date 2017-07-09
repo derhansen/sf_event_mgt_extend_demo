@@ -12,22 +12,21 @@ The extension has been created with the extension builder and does the following
 All extension builder related files are kept, so you can load this demo extension directly
 with the extension builder.
 
-**Update 16.09.2015:** I updated the demo extension to use TCA overrides. I actually don't know, if the 
-extension builder created TCA overrides, so make sure you have a look at the folder Configuration/TCA/Overrides
-of this extension in order to understand how the domain models are extended.
-
 ## Short manual how to extend sf_event_mgt
 
-1. Create a new extension with the extension builder
-2. Add sf_event_mgt as a dependency for your new extension
-3. Create a new table and add the new properties (fields). For each new table, select "Extend existing model class"
+1. Install ext:extender from TYPO3 Extension Repository
+2. Create a new extension with the extension builder
+3. Add sf_event_mgt as a dependency for your new extension
+4. Create a new table and add the new properties (fields). For each new table, select "Extend existing model class"
 and enter the class of the sf_event_mgt table you want to extend (e.g. \DERHANSEN\SfEventMgt\Domain\Model\Event)
-4. Save the extension
-5. Install the extension
-6. Use new fields in backend and frontend
+5. Save the extension
+6. Add configuration for ext:extender in ext_localconf.php of your extension
+7. Install the extension
+8. Use new fields in backend and frontend
 
-###Extending registration domain model###
-If you extend the registration domain model, make sure to add the following to ext_typoscript_setup.txt
+###Extending controller actions
+If you want to extend an action of sf_event_mgt, you can extend to whole class in ext_typoscript_setup.txt like shown 
+below (example for extending the EventController)
 
 ```
 config.tx_extbase{
@@ -37,9 +36,7 @@ config.tx_extbase{
 }
 ```
 
-Also make sure, that your extension contains a controller, which contains the `saveRegistrationAction` as shown
-in this demo extension.
-
 ## Links
 
-sf_event_mgt is available on GitHub at https://github.com/derhansen/sf_event_mgt
+* ext:sf_event_mgt is available on GitHub at https://github.com/derhansen/sf_event_mgt
+* ext:extender in TYPO3 Extension Repository https://typo3.org/extensions/repository/view/extender
