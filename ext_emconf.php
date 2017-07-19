@@ -15,7 +15,6 @@ $EM_CONF[$_EXTKEY] = array(
         'depends' => array(
             'typo3' => '6.2.0-8.7.99',
             'sf_event_mgt' => '2.0.0-0.0.0',
-            'extender' => '6.4.6-0.0.0'
         ),
         'conflicts' => array(),
         'suggests' => array(),
