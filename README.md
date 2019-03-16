@@ -22,19 +22,41 @@ and enter the class of the sf_event_mgt table you want to extend (e.g. \DERHANSE
 5. Install the extension
 6. Use new fields in backend and frontend
 
-###Extending registration domain model###
-If you extend the registration domain model, make sure to add the following to ext_typoscript_setup.txt
+### Extending domain model manually
 
-```
-config.tx_extbase{
-    objects {
-        DERHANSEN\SfEventMgt\Controller\EventController.className = VENDOR\YourExtenstionKey\Controller\EventController
+If you extend the event domain model manually, the following steps are required.
+
+1. Extend tx_sfeventmgt_domain_model_event table in ext_tables.sql of your extension
+2. Create and register required TCA changes using TCA overrides
+3. Create a class in your own extension which extends \DERHANSEN\SfEventMgt\Domain\Model\Event
+4. Map new class to use tx_sfeventmgt_domain_model_event table in ext_typoscript_setup.txt
+
+    ```
+    config.tx_extbase {
+        persistence.classes {
+            DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event {
+                mapping.tableName = tx_sfeventmgt_domain_model_event
+            }
+        }
     }
-}
-```
+    ```
 
-Also make sure, that your extension contains a controller, which contains the `saveRegistrationAction` as shown
-in this demo extension.
+5. XCLASS domain model in ext_localconf.php
+
+    ```
+    // XCLASS event
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\DERHANSEN\SfEventMgt\Domain\Model\Event::class] = [
+        'className' => \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event::class
+    ];
+    
+    // Register extended domain class
+    GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\Object\Container\Container::class)
+        ->registerImplementation(
+            \DERHANSEN\SfEventMgt\Domain\Model\Event::class,
+            \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event::class
+        );
+    
+    ```  
 
 ## Links
 

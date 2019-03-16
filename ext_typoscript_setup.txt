@@ -1,9 +1,4 @@
 config.tx_extbase {
-    objects {
-        DERHANSEN\SfEventMgt\Controller\EventController.className = DERHANSEN\SfEventMgtExtendDemo\Controller\EventController
-        DERHANSEN\SfEventMgt\Domain\Model\Event.className = DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event
-        DERHANSEN\SfEventMgt\Domain\Model\Registration.className = DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Registration
-    }
     persistence.classes {
         DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event {
             mapping.tableName = tx_sfeventmgt_domain_model_event
