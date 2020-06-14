@@ -8,6 +8,8 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Controller;
  * LICENSE.txt file that was distributed with this source code.
  */
 
+use TYPO3\CMS\Extbase\Annotation as Extbase;
+
 /**
  * EventController
  */
@@ -18,7 +20,10 @@ class EventController extends \DERHANSEN\SfEventMgt\Controller\EventController
      *
      * @param $registration \DERHANSEN\SfEventMgt\Domain\Model\Registration
      * @param $event \DERHANSEN\SfEventMgt\Domain\Model\Event
-     * @validate $registration \DERHANSEN\SfEventMgt\Validation\Validator\RegistrationValidator
+     *
+     * @Extbase\Validate("DERHANSEN\SfEventMgt\Validation\Validator\RegistrationFieldValidator", param="registration")
+     * @Extbase\Validate("DERHANSEN\SfEventMgt\Validation\Validator\RegistrationValidator", param="registration")
+     *
      * @return void
      */
     public function saveRegistrationAction(

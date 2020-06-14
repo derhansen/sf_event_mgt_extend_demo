@@ -29,16 +29,21 @@ If you extend the event domain model manually, the following steps are required.
 1. Extend tx_sfeventmgt_domain_model_event table in ext_tables.sql of your extension
 2. Create and register required TCA changes using TCA overrides
 3. Create a class in your own extension which extends \DERHANSEN\SfEventMgt\Domain\Model\Event
-4. Map new class to use tx_sfeventmgt_domain_model_event table in ext_typoscript_setup.txt
+4. Map new class to use tx_sfeventmgt_domain_model_event table in Configuration/Extbase/Persistence/Classes.php
 
     ```
-    config.tx_extbase {
-        persistence.classes {
-            DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event {
-                mapping.tableName = tx_sfeventmgt_domain_model_event
-            }
-        }
-    }
+    <?php
+    
+    declare(strict_types=1);
+    
+    return [
+        \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event::class => [
+            'tableName' => 'tx_sfeventmgt_domain_model_event',
+        ],
+        \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Registration::class => [
+            'tableName' => 'tx_sfeventmgt_domain_model_registration',
+        ],
+    ];
     ```
 
 5. XCLASS domain model in ext_localconf.php
@@ -57,6 +62,13 @@ If you extend the event domain model manually, the following steps are required.
         );
     
     ```  
+
+## Versions
+
+| Version             | TYPO3      | PHP       |
+| ------------------- | ---------- | ----------|
+| 0.4                 | 10.4       | >= 7.2    |
+| 0.3                 | 8.7 - 9.5  | 7.0 - 7.3 |
 
 ## Links
 
