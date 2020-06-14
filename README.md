@@ -40,9 +40,6 @@ If you extend the event domain model manually, the following steps are required.
         \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event::class => [
             'tableName' => 'tx_sfeventmgt_domain_model_event',
         ],
-        \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Registration::class => [
-            'tableName' => 'tx_sfeventmgt_domain_model_registration',
-        ],
     ];
     ```
 
