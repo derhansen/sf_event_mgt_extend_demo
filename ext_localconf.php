@@ -33,10 +33,5 @@ call_user_func(
         $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\DERHANSEN\SfEventMgt\Controller\EventController::class] = [
             'className' => \DERHANSEN\SfEventMgtExtendDemo\Controller\EventController::class
         ];
-
-        // XCLASS event
-        $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\DERHANSEN\SfEventMgt\Domain\Model\Dto\EventDemand::class] = [
-            'className' => \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Dto\EventDemand::class
-        ];
     }
 );
