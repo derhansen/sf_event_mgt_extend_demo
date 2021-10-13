@@ -33,9 +33,9 @@ If you extend the event domain model manually, the following steps are required.
 
     ```
     <?php
-    
+
     declare(strict_types=1);
-    
+
     return [
         \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event::class => [
             'tableName' => 'tx_sfeventmgt_domain_model_event',
@@ -50,21 +50,22 @@ If you extend the event domain model manually, the following steps are required.
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\DERHANSEN\SfEventMgt\Domain\Model\Event::class] = [
         'className' => \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event::class
     ];
-    
+
     // Register extended domain class
     GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\Object\Container\Container::class)
         ->registerImplementation(
             \DERHANSEN\SfEventMgt\Domain\Model\Event::class,
             \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event::class
         );
-    
-    ```  
+
+    ```
 
 ## Versions
 
 | Version             | TYPO3      | PHP       |
 | ------------------- | ---------- | ----------|
-| 0.4                 | 10.4       | >= 7.2    |
+| 0.5                 | 11.4       | >= 7.4    |
+| 0.4                 | 10.4       | 7.2 - 7.4 |
 | 0.3                 | 8.7 - 9.5  | 7.0 - 7.3 |
 
 ## Links

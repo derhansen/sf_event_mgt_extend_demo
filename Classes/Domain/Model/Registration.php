@@ -13,68 +13,30 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Domain\Model;
  */
 class Registration extends \DERHANSEN\SfEventMgt\Domain\Model\Registration
 {
-    /**
-     * hotelRoomNeeded
-     *
-     * @var boolean
-     */
-    protected $hotelRoomNeeded = false;
+    protected bool $hotelRoomNeeded = false;
+    protected string $fax = '';
 
-    /**
-     * fax
-     *
-     * @var string
-     */
-    protected $fax = '';
-
-    /**
-     * Returns the hotelRoomNeeded
-     *
-     * @return boolean $hotelRoomNeeded
-     */
-    public function getHotelRoomNeeded()
+    public function getHotelRoomNeeded(): bool
     {
         return $this->hotelRoomNeeded;
     }
 
-    /**
-     * Sets the hotelRoomNeeded
-     *
-     * @param boolean $hotelRoomNeeded
-     * @return void
-     */
-    public function setHotelRoomNeeded($hotelRoomNeeded)
+    public function setHotelRoomNeeded(bool $hotelRoomNeeded)
     {
         $this->hotelRoomNeeded = $hotelRoomNeeded;
     }
 
-    /**
-     * Returns the boolean state of hotelRoomNeeded
-     *
-     * @return boolean
-     */
-    public function isHotelRoomNeeded()
+    public function isHotelRoomNeeded(): bool
     {
         return $this->hotelRoomNeeded;
     }
 
-    /**
-     * Returns the fax
-     *
-     * @return string $fax
-     */
-    public function getFax()
+    public function getFax(): string
     {
         return $this->fax;
     }
 
-    /**
-     * Sets the fax
-     *
-     * @param string $fax
-     * @return void
-     */
-    public function setFax($fax)
+    public function setFax(string $fax)
     {
         $this->fax = $fax;
     }

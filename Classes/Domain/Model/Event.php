@@ -13,30 +13,14 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Domain\Model;
  */
 class Event extends \DERHANSEN\SfEventMgt\Domain\Model\Event
 {
-    /**
-     * entrance
-     *
-     * @var string
-     */
-    protected $entrance = '';
+    protected string $entrance = '';
 
-    /**
-     * Returns the entrance
-     *
-     * @return string $entrance
-     */
-    public function getEntrance()
+    public function getEntrance(): string
     {
         return $this->entrance;
     }
 
-    /**
-     * Sets the entrance
-     *
-     * @param string $entrance
-     * @return void
-     */
-    public function setEntrance($entrance)
+    public function setEntrance(string $entrance)
     {
         $this->entrance = $entrance;
     }
