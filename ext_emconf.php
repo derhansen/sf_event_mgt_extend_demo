@@ -8,11 +8,11 @@ $EM_CONF[$_EXTKEY] = [
     'state' => 'beta',
     'uploadfolder' => '0',
     'clearCacheOnLoad' => 0,
-    'version' => '0.5.1',
+    'version' => '0.6.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.0-11.5.99',
-            'sf_event_mgt' => '6.0.0-0.0.0',
+            'typo3' => '12.2.0-12.4.99',
+            'sf_event_mgt' => '7.0.0-7.99.99',
         ],
         'conflicts' => [],
         'suggests' => [],

@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace DERHANSEN\SfEventMgtExtendDemo\Domain\Model;
 
 /*
@@ -8,9 +11,6 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Domain\Model;
  * LICENSE.txt file that was distributed with this source code.
  */
 
-/**
- * Registration
- */
 class Registration extends \DERHANSEN\SfEventMgt\Domain\Model\Registration
 {
     protected bool $hotelRoomNeeded = false;
@@ -21,7 +21,7 @@ class Registration extends \DERHANSEN\SfEventMgt\Domain\Model\Registration
         return $this->hotelRoomNeeded;
     }
 
-    public function setHotelRoomNeeded(bool $hotelRoomNeeded)
+    public function setHotelRoomNeeded(bool $hotelRoomNeeded): void
     {
         $this->hotelRoomNeeded = $hotelRoomNeeded;
     }
@@ -36,7 +36,7 @@ class Registration extends \DERHANSEN\SfEventMgt\Domain\Model\Registration
         return $this->fax;
     }
 
-    public function setFax(string $fax)
+    public function setFax(string $fax): void
     {
         $this->fax = $fax;
     }

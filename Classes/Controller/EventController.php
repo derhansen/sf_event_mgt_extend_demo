@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace DERHANSEN\SfEventMgtExtendDemo\Controller;
 
 /*
@@ -8,31 +11,26 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Controller;
  * LICENSE.txt file that was distributed with this source code.
  */
 
+use DERHANSEN\SfEventMgt\Domain\Model\Event;
+use DERHANSEN\SfEventMgt\Domain\Model\Registration;
+use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Annotation as Extbase;
 
-/**
- * EventController
- */
 class EventController extends \DERHANSEN\SfEventMgt\Controller\EventController
 {
     /**
      * Saves the registration
      *
-     * @param $registration \DERHANSEN\SfEventMgt\Domain\Model\Registration
-     * @param $event \DERHANSEN\SfEventMgt\Domain\Model\Event
-     *
      * @Extbase\Validate("DERHANSEN\SfEventMgt\Validation\Validator\RegistrationFieldValidator", param="registration")
      * @Extbase\Validate("DERHANSEN\SfEventMgt\Validation\Validator\RegistrationValidator", param="registration")
-     *
-     * @return void
      */
     public function saveRegistrationAction(
-        \DERHANSEN\SfEventMgt\Domain\Model\Registration $registration,
-        \DERHANSEN\SfEventMgt\Domain\Model\Event $event
-    ) {
+        Registration $registration,
+        Event $event
+    ):ResponseInterface {
         // Only for demonstration purposes. Please note, that you should execute your custom code before calling
         // the parent::saveRegistrationAction, since parent::saveRegistrationAction redirects to another action
         // and your code will never be executed when placed after parent::saveRegistrationAction.
-        parent::saveRegistrationAction($registration, $event);
+        return parent::saveRegistrationAction($registration, $event);
     }
 }

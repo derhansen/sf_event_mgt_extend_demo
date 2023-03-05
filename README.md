@@ -43,27 +43,20 @@ If you extend the event domain model manually, the following steps are required.
     ];
     ```
 
-5. XCLASS domain model in ext_localconf.php
+5. xclass domain model in ext_localconf.php
 
     ```
-    // XCLASS event
+    // xclass event domain model
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\DERHANSEN\SfEventMgt\Domain\Model\Event::class] = [
         'className' => \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event::class
     ];
-
-    // Register extended domain class
-    GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\Object\Container\Container::class)
-        ->registerImplementation(
-            \DERHANSEN\SfEventMgt\Domain\Model\Event::class,
-            \DERHANSEN\SfEventMgtExtendDemo\Domain\Model\Event::class
-        );
-
     ```
 
 ## Versions
 
 | Version | TYPO3     | PHP       |
 |---------|-----------|-----------|
+| 0.6.0   | 12.2+     | >= 8.1    |
 | 0.5.1   | 11.5      | >= 7.4    |
 | 0.4.0   | 10.4      | 7.2 - 7.4 |
 | 0.3.0   | 8.7 - 9.5 | 7.0 - 7.3 |

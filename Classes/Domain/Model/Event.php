@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace DERHANSEN\SfEventMgtExtendDemo\Domain\Model;
 
 /*
@@ -8,9 +11,6 @@ namespace DERHANSEN\SfEventMgtExtendDemo\Domain\Model;
  * LICENSE.txt file that was distributed with this source code.
  */
 
-/**
- * Event
- */
 class Event extends \DERHANSEN\SfEventMgt\Domain\Model\Event
 {
     protected string $entrance = '';
@@ -20,7 +20,7 @@ class Event extends \DERHANSEN\SfEventMgt\Domain\Model\Event
         return $this->entrance;
     }
 
-    public function setEntrance(string $entrance)
+    public function setEntrance(string $entrance): void
     {
         $this->entrance = $entrance;
     }
