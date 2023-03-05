@@ -9,8 +9,8 @@ The extension has been created with the extension builder and does the following
 * Extend the event domain model with the new field "Entrance"
 * Extend the registration domain model with the new fields "Hotel room needed" and "Fax"
 
-All extension builder related files are kept, so you can load this demo extension directly
-with the extension builder.
+Additionally, the extension extends the `saveRegistrationAction` from the `EventController` 
+to demonstrate how the `EventController` can be extended using xclass.
 
 ## Short manual how to extend sf_event_mgt
 
