@@ -21,9 +21,6 @@
     "typo3/cms-core": "^12.4",
     "derhansen/sf_event_mgt": "^7.1.0"
   },
-  "replace": {
-    "sf_event_mgt_extend_demo": "self.version"
-  },
   "autoload": {
     "psr-4": {
       "DERHANSEN\\SfEventMgtExtendDemo\\": "Classes"
