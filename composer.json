@@ -18,8 +18,8 @@
     "GPL-2.0+"
   ],
   "require": {
-    "typo3/cms-core": "^12.4",
-    "derhansen/sf_event_mgt": "^7.1.0"
+    "typo3/cms-core": "^13.4",
+    "derhansen/sf_event_mgt": "^8.0.0"
   },
   "autoload": {
     "psr-4": {

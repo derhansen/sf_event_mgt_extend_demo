@@ -56,6 +56,7 @@ If you extend the event domain model manually, the following steps are required.
 
 | Version | TYPO3     | PHP       |
 |---------|-----------|-----------|
+| 0.7.0   | 13.4+     | >= 8.2    |
 | 0.6.0   | 12.2+     | >= 8.1    |
 | 0.5.1   | 11.5      | >= 7.4    |
 | 0.4.0   | 10.4      | 7.2 - 7.4 |
